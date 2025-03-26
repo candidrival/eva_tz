@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    // progress
+    <declare-styleable name="ProgressLoadingOverlay">
+        <attr name="plo_backgroundColor" format="color" />
+        <attr name="plo_handle_click" format="boolean" />
+    </declare-styleable>
+
+    //global
+    <attr name="textColorLight" format="reference" />
+    <attr name="textColorDark" format="reference" />
+    <attr name="textColorDarkOpacity56" format="reference" />
+    <attr name="textColorLightOpacity50" format="reference" />
+    <attr name="textColorLoginDark" format="reference" />
+    <attr name="textHintColor" format="reference" />
+    <attr name="textErrorColor" format="reference" />
+</resources>

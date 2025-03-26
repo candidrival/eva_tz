@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="BaseTheme" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false
+        </item>
+
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+
+        <item name="textColorLight">@color/white</item>
+        <item name="textColorDark">@color/black</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="AppThemeLauncher" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>
