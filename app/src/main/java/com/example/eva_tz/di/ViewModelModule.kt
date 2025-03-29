@@ -1,5 +1,6 @@
 package com.example.eva_tz.di
 
+import com.example.eva_tz.presentation.activity.MainViewModel
 import com.example.eva_tz.presentation.camera.CameraViewModel
 import com.example.eva_tz.presentation.gallery.GalleryViewModel
 import com.example.eva_tz.presentation.image.ImageViewModel
@@ -14,6 +15,7 @@ import org.koin.dsl.module
  */
 val viewModel: Module = module {
     viewModel { BaseViewModel() }
+    viewModel { MainViewModel() }
     viewModel { SplashViewModel() }
     viewModel { CameraViewModel() }
     viewModel { GalleryViewModel() }

@@ -6,13 +6,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.stacklab_tz"
-    compileSdk = 34
+    namespace = "com.example.eva_tz"
+    compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.stacklab_tz"
+        applicationId = "com.example.eva_tz"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -87,8 +87,16 @@ dependencies {
     // Work Manager
     implementation(libs.androidx.work)
 
+    //Camera
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
+
     //Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation("jp.co.cyberagent.android:gpuimage:2.1.0")
 }

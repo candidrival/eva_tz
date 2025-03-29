@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.viewbinding.ViewBinding
+import com.example.eva_tz.presentation.activity.MainActivity
 
 abstract class BaseFragment<B : ViewBinding, V : BaseViewModel> : Fragment() {
     protected abstract val viewModel: V
@@ -22,10 +23,10 @@ abstract class BaseFragment<B : ViewBinding, V : BaseViewModel> : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //sets top insets from activity
-        viewModel.statusBarHeight = (activity as BaseActivity<*, *>).getStatusBarHeight()
+        viewModel.statusBarHeight = (activity as MainActivity).getStatusBarHeight()
         //sets bottom insets from activity
         viewModel.navigationBottomHeight =
-            (activity as BaseActivity<*, *>).getNavigationBottomHeight()
+            (activity as MainActivity).getNavigationBottomHeight()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

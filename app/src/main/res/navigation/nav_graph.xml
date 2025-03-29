@@ -2,30 +2,46 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/app_nav_graph"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/splashFragment">
 
     <fragment
         android:id="@+id/splashFragment"
         android:name="com.example.eva_tz.presentation.splash.SplashFragment"
         android:label="SplashFragment"
-        tools:layout="@layout/fragment_splash"/>
+        tools:layout="@layout/fragment_splash" />
 
     <fragment
         android:id="@+id/cameraFragment"
         android:name="com.example.eva_tz.presentation.camera.CameraFragment"
         android:label="CameraFragment"
-        tools:layout="@layout/fragment_camera"/>
+        tools:layout="@layout/fragment_camera" />
 
     <fragment
         android:id="@+id/galleryFragment"
         android:name="com.example.eva_tz.presentation.gallery.GalleryFragment"
         android:label="GalleryFragment"
-        tools:layout="@layout/fragment_gallery"/>
+        tools:layout="@layout/fragment_gallery">
+
+        <action
+            android:id="@+id/action_galleryFragment_to_imageFragment"
+            app:destination="@id/imageFragment">
+            <argument
+                android:name="uri"
+                app:argType="string" />
+        </action>
+
+    </fragment>
 
     <fragment
         android:id="@+id/imageFragment"
         android:name="com.example.eva_tz.presentation.image.ImageFragment"
         android:label="ImageFragment"
-        tools:layout="@layout/fragment_image"/>
+        tools:layout="@layout/fragment_image">
+
+        <argument
+            android:name="uri"
+            app:argType="string" />
+    </fragment>
+
 </navigation>
